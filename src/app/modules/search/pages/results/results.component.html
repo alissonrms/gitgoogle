@@ -1,0 +1,22 @@
+<section>
+  <form (ngSubmit)="handleSubmit()">
+    <a routerLink="/"> <img src="assets/logo.png" alt="" /></a>
+    <input
+      type="text"
+      name="search"
+      id="search"
+      autocomplete="off"
+      placeholder="Digite o github do usuário"
+      [(ngModel)]="searchInput"
+    />
+  </form>
+  <ul>
+    <li *ngFor="let repo of repos">
+      <a [href]="repo.html_url" target="_blank">{{ repo.full_name }}</a>
+      <span>{{ repo.description }}</span>
+    </li>
+    <li *ngIf="repos.length === 0">
+      <span>Nenhum repositório encontrado</span>
+    </li>
+  </ul>
+</section>

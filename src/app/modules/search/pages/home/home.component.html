@@ -1,0 +1,14 @@
+<section>
+  <img src="assets/logo.png" alt="" />
+  <form (ngSubmit)="handleSubmit()">
+    <input
+      type="text"
+      name="search"
+      id="search"
+      placeholder="Digite o github do usuário"
+      autocomplete="off"
+      [(ngModel)]="searchInput"
+    />
+    <button type="submit">Pesquisa GitGoogle</button>
+  </form>
+</section>
